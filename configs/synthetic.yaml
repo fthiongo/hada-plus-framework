@@ -1,0 +1,30 @@
+seed: 42
+
+synthetic:
+  n_samples: 12000
+  n_features: 12
+  fraud_ratio: 0.02
+  abrupt_drift_at: 5000
+  gradual_drift_start: 7000
+  gradual_drift_end: 9000
+  recurring_drift_at: 10000
+
+data:
+  window_size: 2000
+  step_fraction: 0.5
+  pca_variance: 0.95
+
+hada_plus:
+  baseline_k: 50
+  beta: 0.3
+  ot_epsilon: 0.1
+  n_clusters: 5
+  iforest_estimators: 50
+  iforest_contamination: auto
+
+experiments:
+  n_runs: 10
+
+paths:
+  results_dir: results
+  figures_dir: figures

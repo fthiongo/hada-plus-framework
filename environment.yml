@@ -1,0 +1,16 @@
+name: hadaplus
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  - joblib
+  - tqdm
+  - pip
+  - pip:
+      - POT>=0.9.3

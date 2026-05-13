@@ -1,0 +1,21 @@
+seed: 42
+
+data:
+  window_size: 5000
+  step_fraction: 0.2
+  pca_variance: 0.95
+
+hada_plus:
+  baseline_k: 100
+  beta: 0.3
+  ot_epsilon: 0.1
+  n_clusters: 10
+  iforest_estimators: 100
+  iforest_contamination: auto
+
+experiments:
+  n_runs: 10
+
+paths:
+  results_dir: results
+  figures_dir: figures
