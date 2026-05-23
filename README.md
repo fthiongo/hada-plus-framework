@@ -1,136 +1,57 @@
-# Synthetic Financial Dataset
+# Restricted Proprietary Mobile Banking Dataset
 
-This directory contains the synthetic financial transaction dataset generated for evaluating the HADA+ framework under evolving concept drift conditions.
+This directory documents the proprietary mobile banking transaction dataset used in selected HADA+ experiments.
 
-## Dataset Description
+## Dataset Status
 
-The synthetic dataset simulates realistic financial transaction streams with evolving behavioral distributions and anomaly structures.
+The dataset is not publicly distributed.
 
-The dataset was generated using a PaySim-inspired simulation methodology adapted for:
+No proprietary transaction records are included in this repository.
 
-- streaming anomaly detection,
-- drift-aware fraud analytics,
-- anomaly continuity preservation,
-- lifecycle evolution modeling,
-- temporal clustering analysis.
+## Restriction Reason
 
-The generated transaction stream contains:
+The mobile banking dataset contains commercially sensitive and confidential financial transaction records obtained under:
 
-- abrupt drift,
-- gradual drift,
-- recurring drift,
-- evolving anomaly clusters,
-- temporal behavioral transitions.
+- non-disclosure agreements (NDA),
+- institutional confidentiality obligations,
+- contractual data-use restrictions,
+- ethical approval conditions,
+- customer privacy protections.
 
-Expected compressed dataset file:
+Public release of the dataset is therefore prohibited.
 
-```text
-Syntheticfinancial.zip
-```
+## Ethical Compliance
 
-Expected extracted dataset file:
+All analyses involving the proprietary dataset were conducted under institutional ethical approval and in accordance with applicable:
 
-```text
-syntheticfinancial.csv
-```
+- data protection policies,
+- confidentiality regulations,
+- secure data handling procedures.
 
-## Purpose Within HADA+
+All processing was performed on secure, access-controlled systems.
 
-The synthetic dataset supports evaluation of:
+## Availability
 
-- drift-conditioned anomaly prioritization,
-- score-aware clustering,
-- entropy-regularized optimal transport evolution tracking,
-- lifecycle transition modeling,
-- anomaly continuity preservation,
-- post-drift recovery behavior.
+Aggregated and non-identifiable statistical summaries sufficient to reproduce the reported analyses, tables, and figures may be available from the corresponding author upon reasonable request, subject to approval by the data provider and applicable data-use restrictions.
 
-## Repository Placement
+## Reproducibility Support
 
-Place the extracted CSV file inside:
-
-```text
-data/synthetic/
-```
-
-Final structure:
-
-```text
-data/synthetic/
-├── Syntheticfinancial.zip
-├── syntheticfinancial.csv
-└── README.md
-```
-
-## Running Synthetic Experiments
-
-Run the synthetic experiment pipeline using:
-
-```bash
-python scripts/run_synthetic_experiment.py
-```
-
-Run the full experiment suite using:
-
-```bash
-python scripts/run_all.py
-```
-
-## Configuration Parameters
-
-Synthetic dataset generation parameters are stored under:
-
-```text
-configs/synthetic.yaml
-```
-
-The configuration file controls:
-
-- drift intensity,
-- drift type,
-- anomaly ratio,
-- window size,
-- step fraction,
-- anomaly evolution behavior,
-- temporal dynamics.
-
-## Experimental Outputs
-
-Generated outputs are saved under:
-
-```text
-results/
-figures/
-```
-
-## Reproducibility
-
-The default random seed used in experiments is:
-
-```text
-42
-```
-
-The repository includes:
+The repository provides:
 
 - preprocessing pipelines,
-- anomaly scoring modules,
-- clustering pipelines,
-- transport evolution modeling,
-- statistical evaluation scripts,
-- figure generation scripts.
+- experiment scripts,
+- configuration files,
+- evaluation modules,
+- figure generation scripts,
+
+that support reproducibility using the public and synthetic datasets.
+
+Researchers may adapt the same pipeline interface to evaluate privately held datasets under their own institutional approvals.
+
+The reproducibility resources associated with this work are archived at:
+
+https://doi.org/10.5281/zenodo.20357523
 
 ## Associated Manuscript
 
 HADA+: An Evolution-Aware Framework for Drift-Resilient Anomaly Detection with Score-Aware Clustering and Optimal Transport Evolution
-
-## Important Note
-
-This dataset is synthetic and does not contain real customer financial records or personally identifiable information.
-
-## Download Link
-
-The compressed synthetic dataset archive can be downloaded from:
-
-https://hada-plus.taskmatehub.com/Syntheticfinancial.zip
-
