@@ -1,69 +1,81 @@
-# Public Credit Card Fraud Dataset
+# Synthetic Financial Dataset
 
-This directory documents the public benchmark credit card fraud dataset used in the HADA+ experiments.
+This directory documents the synthetic financial transaction dataset generated for evaluating the HADA+ framework under evolving concept drift conditions.
 
 ## Dataset Description
 
-The dataset contains anonymized European credit card transactions labeled as fraudulent or legitimate and is widely used as a benchmark for anomaly detection, fraud detection, and highly imbalanced classification research.
+The synthetic dataset simulates realistic financial transaction streams with evolving behavioral distributions and anomaly structures.
 
-The dataset was originally introduced by:
+The dataset was generated using a PaySim-inspired simulation methodology adapted for:
 
-Andrea Dal Pozzolo, Olivier Caelen, Reid A. Johnson, and Gianluca Bontempi.
+- streaming anomaly detection,
+- drift-aware fraud analytics,
+- anomaly continuity preservation,
+- lifecycle evolution modeling,
+- temporal clustering analysis.
 
-The transactions were transformed using Principal Component Analysis (PCA) for confidentiality preservation, resulting in anonymized features V1–V28.
+The generated transaction stream contains:
 
-## Original Dataset Source
+- abrupt drift,
+- gradual drift,
+- recurring drift,
+- evolving anomaly clusters,
+- temporal behavioral transitions.
 
-Kaggle public repository:
+## Purpose Within HADA+
 
-https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
+The synthetic dataset supports evaluation of:
 
-## Experimental Usage in HADA+
+- drift-conditioned anomaly prioritization,
+- score-aware clustering,
+- entropy-regularized optimal transport evolution tracking,
+- lifecycle transition modeling,
+- anomaly continuity preservation,
+- post-drift recovery behavior.
 
-Within the HADA+ framework, this dataset is used to evaluate:
+## Configuration Parameters
 
-- anomaly detection accuracy,
-- PR-AUC performance,
-- ROC-AUC performance,
-- operational alert prioritization,
-- temporal stability under streaming windows,
-- anomaly continuity preservation.
+Synthetic dataset generation parameters are defined under:
+
+```text
+configs/synthetic.yaml
+```
+
+The configuration settings control:
+
+- drift intensity,
+- drift type,
+- anomaly ratio,
+- window size,
+- step fraction,
+- anomaly evolution behavior,
+- temporal dynamics.
 
 ## Reproducibility
 
-Experimental configurations are stored under:
+The repository includes:
 
-```text
-configs/
-```
-
-Main configuration files include:
-
-```text
-configs/default.yaml
-configs/synthetic.yaml
-```
+- preprocessing pipelines,
+- anomaly scoring modules,
+- clustering pipelines,
+- transport evolution modeling,
+- statistical evaluation scripts,
+- figure generation scripts.
 
 The reproducibility resources associated with this work are archived at:
 
 https://doi.org/10.5281/zenodo.20357523
 
-## Citation
-
-If you use this dataset, please cite the original source appropriately.
-
-Example citation:
-
-Dal Pozzolo, A., Caelen, O., Johnson, R. A., & Bontempi, G.
-"Calibrating Probability with Undersampling for Unbalanced Classification."
-IEEE Symposium Series on Computational Intelligence, 2015.
-
 ## Associated Manuscript
 
 HADA+: An Evolution-Aware Framework for Drift-Resilient Anomaly Detection with Score-Aware Clustering and Optimal Transport Evolution
 
+## Important Note
+
+This dataset is synthetic and does not contain real customer financial records or personally identifiable information.
+
 ## Download Link
 
-A compressed copy of the dataset used in the experiments is accessible through the reproducibility mirror:
+A compressed copy of the synthetic dataset used in the experiments is accessible through the reproducibility mirror:
 
-https://hada-plus.taskmatehub.com/creditcard.zip
+https://hada-plus.taskmatehub.com/Syntheticfinancial.zip
