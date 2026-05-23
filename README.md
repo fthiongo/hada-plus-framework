@@ -1,57 +1,69 @@
-# Restricted Proprietary Mobile Banking Dataset
+# Public Credit Card Fraud Dataset
 
-This directory documents the proprietary mobile banking transaction dataset used in selected HADA+ experiments.
+This directory documents the public benchmark credit card fraud dataset used in the HADA+ experiments.
 
-## Dataset Status
+## Dataset Description
 
-The dataset is not publicly distributed.
+The dataset contains anonymized European credit card transactions labeled as fraudulent or legitimate and is widely used as a benchmark for anomaly detection, fraud detection, and highly imbalanced classification research.
 
-No proprietary transaction records are included in this repository.
+The dataset was originally introduced by:
 
-## Restriction Reason
+Andrea Dal Pozzolo, Olivier Caelen, Reid A. Johnson, and Gianluca Bontempi.
 
-The mobile banking dataset contains commercially sensitive and confidential financial transaction records obtained under:
+The transactions were transformed using Principal Component Analysis (PCA) for confidentiality preservation, resulting in anonymized features V1–V28.
 
-- non-disclosure agreements (NDA),
-- institutional confidentiality obligations,
-- contractual data-use restrictions,
-- ethical approval conditions,
-- customer privacy protections.
+## Original Dataset Source
 
-Public release of the dataset is therefore prohibited.
+Kaggle public repository:
 
-## Ethical Compliance
+https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud
 
-All analyses involving the proprietary dataset were conducted under institutional ethical approval and in accordance with applicable:
+## Experimental Usage in HADA+
 
-- data protection policies,
-- confidentiality regulations,
-- secure data handling procedures.
+Within the HADA+ framework, this dataset is used to evaluate:
 
-All processing was performed on secure, access-controlled systems.
+- anomaly detection accuracy,
+- PR-AUC performance,
+- ROC-AUC performance,
+- operational alert prioritization,
+- temporal stability under streaming windows,
+- anomaly continuity preservation.
 
-## Availability
+## Reproducibility
 
-Aggregated and non-identifiable statistical summaries sufficient to reproduce the reported analyses, tables, and figures may be available from the corresponding author upon reasonable request, subject to approval by the data provider and applicable data-use restrictions.
+Experimental configurations are stored under:
 
-## Reproducibility Support
+```text
+configs/
+```
 
-The repository provides:
+Main configuration files include:
 
-- preprocessing pipelines,
-- experiment scripts,
-- configuration files,
-- evaluation modules,
-- figure generation scripts,
-
-that support reproducibility using the public and synthetic datasets.
-
-Researchers may adapt the same pipeline interface to evaluate privately held datasets under their own institutional approvals.
+```text
+configs/default.yaml
+configs/synthetic.yaml
+```
 
 The reproducibility resources associated with this work are archived at:
 
 https://doi.org/10.5281/zenodo.20357523
 
+## Citation
+
+If you use this dataset, please cite the original source appropriately.
+
+Example citation:
+
+Dal Pozzolo, A., Caelen, O., Johnson, R. A., & Bontempi, G.
+"Calibrating Probability with Undersampling for Unbalanced Classification."
+IEEE Symposium Series on Computational Intelligence, 2015.
+
 ## Associated Manuscript
 
 HADA+: An Evolution-Aware Framework for Drift-Resilient Anomaly Detection with Score-Aware Clustering and Optimal Transport Evolution
+
+## Download Link
+
+A compressed copy of the dataset used in the experiments is accessible through the reproducibility mirror:
+
+https://hada-plus.taskmatehub.com/creditcard.zip
